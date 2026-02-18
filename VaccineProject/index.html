@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Vaccine Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 Travel Vaccine Guide</h1>
+            <p>Get CDC-recommended vaccines for your destination</p>
+        </div>
+
+        <div class="content">
+            <div class="search-container">
+                <label for="countrySearch">Where are you traveling?</label>
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="countrySearch" 
+                        placeholder="Type a country name..." 
+                        autocomplete="off"
+                    >
+                    <div class="dropdown" id="dropdown"></div>
+                </div>
+            </div>
+
+            <div id="results"></div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Important:</strong> This information is based on CDC guidelines. Consult with a healthcare provider or travel medicine specialist 4-6 weeks before your trip.</p>
+            <p>For the most current information, visit the <a href="https://wwwnc.cdc.gov/travel" target="_blank">CDC Travelers' Health website</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

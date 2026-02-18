@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.3) 0%, rgba(100, 149, 237, 0.3) 100%),
+                url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwMCIgaGVpZ2h0PSIxMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDwhLS0gT2NlYW4gQmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iMjAwMCIgaGVpZ2h0PSIxMjAwIiBmaWxsPSIjNGU5YWY1Ii8+CiAgCiAgPCEtLSBOb3J0aCBBbWVyaWNhIC0tPgogIDxwYXRoIGQ9Ik0gMjUwIDEyMCBMIDM1MCA4MCBMIDQ1MCAxMDAgTCA1MjAgMTQwIEwgNTYwIDIyMCBMIDUyMCAyODAgTCA0NjAgMzIwIEwgMzgwIDM0MCBMIDMwMCAzMjAgTCAyNDAgMjYwIEwgMjIwIDE4MCBaIiBmaWxsPSIjNmJiMDVjIiBvcGFjaXR5PSIwLjkiLz4KICAKICA8IS0tIFNvdXRoIEFtZXJpY2EgLS0+CiAgPHBhdGggZD0iTSAzODAgNDAwIEwgNDYwIDM3MCBMIDU0MCA0MjAgTCA1ODAgNTQwIEwgNTYwIDY2MCBMIDQ4MCA3MjAgTCA0MDAgNzAwIEwgMzQwIDY0MCBMIDM0MCA1MjAgWiIgZmlsbD0iIzhhYjI1YyIgb3BhY2l0eT0iMC45Ii8+CiAgCiAgPCEtLSBFdXJvcGUgLS0+CiAgPHBhdGggZD0iTSA4NjAgMTIwIEwgOTYwIDEwMCBMIDEwNjAgMTQwIEwgMTA4MCAyMDAgTCAxMDQwIDI2MCBMIDY4MCAyODAgTCA5MDAgMjYwIEwgODYwIDE4MCBaIiBmaWxsPSIjYTFiNDVmIiBvcGFjaXR5PSIwLjkiLz4KICAKICA8IS0tIEFmcmljYSAtLT4KICA8cGF0aCBkPSJNIDg4MCAzMDAgTCAxMDIwIDI4MCBMIDE0MDAgMzIwIEwgMTE4MCA0MDAgTCAxMTYwIDU4MCBMIDG4MCA2NjAgTCAxMDIwIDY0MCBMIDY0MCA1ODAgTCA4ODAgNDYwIFoiIGZpbGw9IiNjOWE4NWQiIG9wYWNpdHk9IjAuOSIvPgogIAogIDwhLS0gQXNpYSAtLT4KICA8cGF0aCBkPSJNIDExNDAgMTIwIEwgMTM4MCAxMDAgTCAxNTgwIDE0MCBMIDE3MDAgMjQwIEwgMTY2MCAzMjAgTCAxNTYwIDM4MCBMIDE0NDAgNDAwIEwgMTMyMCA0MjAgTCAxMjAwIDM2MCBMIDG4MCAyNjAgWiIgZmlsbD0iIzk4YjY1YyIgb3BhY2l0eT0iMC45Ii8+CiAgCiAgPCEtLSBBdXN0cmFsaWEgLS0+CiAgPHBhdGggZD0iTSAxNDQwIDYyMCBMIDE2NjAgNjAwIEwgMTc2MCA2ODAgTCAxNzQwIDc4MCBMIDE2MjAgODIwIEwgMTQ4MCA4MDAgTCAxNDAwIDcyMCBaIiBmaWxsPSIjYzhiNjZhIiBvcGFjaXR5PSIwLjkiLz4KICAKICA8IS0tIEdyZWVubGFuZCAtLT4KICA8cGF0aCBkPSJNIDUyMCA0MCBMIDY0MCAyMCBMIDcyMCA2MCBMIDY4MCAxNDAgTCA1ODAgMTYwIEwgNTIwIDEyMCBaIiBmaWxsPSIjZThlZWVlIiBvcGFjaXR5PSIwLjkiLz4KICAKICA8IS0tIEFudGFyY3RpY2EgLS0+CiAgPHBhdGggZD0iTSAyMDAgMTA0MCBMIDE4MDAgMTA0MCBMIDE4MDAgMTE2MCBMIDI0MCAxMTYwIFoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuOSIvPgogIAogIDwhLS0gSXNsYW5kcyAmIERldGFpbHMgLS0+CiAgPCEtLSBKYXBhbiAtLT4KICA8cGF0aCBkPSJNIDE2MDAgMjYwIEwgMTY0MCAyNDAgTCAxNjYwIDI4MCBMIDE2NDAgMzQwIEwgMTYwMCAzNjAgTCAxNTgwIDMyMCBaIiBmaWxsPSIjODhhNzVjIiBvcGFjaXR5PSIwLjkiLz4KICAKICA8IS0tIFBoaWxpcHBpbmVzIC0tPgogIDxwYXRoIGQ9Ik0gMTUyMCA0ODAgTCAxNTYwIDQ2MCBMIDE1ODAgNTIwIEwgMTU0MCA1NjAgTCAxNTIwIDUyMCBaIiBmaWxsPSIjOGRhZTVkIiBvcGFjaXR5PSIwLjkiLz4KICAKICA8IS0tIElubmVzaWEgLS0+CiAgPHBhdGggZD0iTSAxMzgwIDU0MCBMIDE2MDAgNTYwIEwgMTY0MCA2MDAgTCAxNTgwIDY0MCBMIDE0MDAgNjIwIEwgMTM0MCA1ODAgWiIgZmlsbD0iIzhiYWQ1YyIgb3BhY2l0eT0iMC45Ii8+CiAgCiAgPCEtLSBOZXcgWmVhbGFuZCAtLT4KICA8cGF0aCBkPSJNIDE4MDAgNzgwIEwgMTg0MCA3NjAgTCAxODYwIDgyMCBMIDE4MjAgODYwIEwgMTc4MCA4NDAgWiIgZmlsbD0iIzg1YTU1YyIgb3BhY2l0eT0iMC45Ii8+CiAgCiAgPCEtLSBNYWRhZ2FzY2FyIC0tPgogIDxwYXRoIGQ9Ik0gMTEyMCA2NjAgTCAxMTYwIDY0MCBMIDE4MCDcMjAgTCAxMTYwIDc2MCBMIDG0MCA3NjAgWiIgZmlsbD0iI2IzYTU2MCIgb3BhY2l0eT0iMC45Ii8+CiAgCiAgPCEtLSBDYXJpYmJlYW4gLS0+CiAgPGNpcmNsZSBjeD0iNDQwIiBjeT0iMzgwIiByPSIxNSIgZmlsbD0iIzdkYWQ1YyIgb3BhY2l0eT0iMC45Ii8+CiAgPGNpcmNsZSBjeD0iNDcwIiBjeT0iMzkwIiByPSIxMiIgZmlsbD0iIzdkYWQ1YyIgb3BhY2l0eT0iMC45Ii8+CiAgPGNpcmNsZSBjeD0iNDkwIiBjeT0iMzg1IiByPSIxMCIgZmlsbD0iIzdkYWQ1YyIgb3BhY2l0eT0iMC45Ii8+CiAgCiAgPCEtLSBMYXRpdHVkZSBsaW5lcyAtLT4KICA8bGluZSB4MT0iMCIgeTE9IjMwMCIgeDI9IjIwMDAiIHkyPSIzMDAiIHN0cm9rZT0iIzQwODBhMCIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIxMCw1IiBvcGFjaXR5PSIwLjMiLz4KICA8bGluZSB4MT0iMCIgeTE9IjYwMCIgeDI9IjIwMDAiIHkyPSI2MDAiIHN0cm9rZT0iIzQwODBhMCIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIxMCw1IiBvcGFjaXR5PSIwLjMiLz4KICA8bGluZSB4MT0iMCIgeTE9IjkwMCIgeDI9IjIwMDAiIHkyPSI5MDAiIHN0cm9rZT0iIzQwODBhMCIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIxMCw1IiBvcGFjaXR5PSIwLjMiLz4KICAKICA8IS0tIExvbmdpdHVkZSBsaW5lcyAtLT4KICA8bGluZSB4MT0iNTAwIiB5MT0iMCIgeDI9IjUwMCIgeTI9IjEyMDAiIHN0cm9rZT0iIzQwODBhMCIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIxMCw1IiBvcGFjaXR5PSIwLjMiLz4KICA8bGluZSB4MT0iMTAwMCIgeTE9IjAiIHgyPSIxMDAwIiB5Mj0iMTIwMCIgc3Ryb2tlPSIjNDA4MGEwIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1kYXNoYXJyYXk9IjEwLDUiIG9wYWNpdHk9IjAuMyIvPgogIDxsaW5lIHgxPSIxNTAwIiB5MT0iMCIgeDI9IjE1MDAiIHkyPSIxMjAwIiBzdHJva2U9IiM0MDgwYTAiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWRhc2hhcnJheT0iMTAsNSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==');
+    background-color: #4e9af5;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+.content {
+    padding: 40px 30px;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 1.15em;
+}
+
+.search-box {
+    position: relative;
+}
+
+#countrySearch {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+#countrySearch:focus {
+    outline: none;
+    border-color: #11998e;
+    box-shadow: 0 0 0 3px rgba(17, 153, 142, 0.1);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #11998e;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dropdown.show {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item:hover {
+    background: #f8f9fa;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item.selected {
+    background: #e8f5f3;
+    font-weight: 600;
+}
+
+.results {
+    margin-top: 40px;
+}
+
+.country-header {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.country-header h2 {
+    font-size: 2em;
+    margin-bottom: 8px;
+}
+
+.country-header p {
+    opacity: 0.9;
+    font-size: 1.05em;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #11998e;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e8f5f3;
+}
+
+.vaccine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.vaccine-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #11998e;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vaccine-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.vaccine-card.required {
+    border-left-color: #e74c3c;
+    background: #fff5f5;
+}
+
+.vaccine-card.recommended {
+    border-left-color: #11998e;
+}
+
+.vaccine-card.routine {
+    border-left-color: #95a5a6;
+    background: #f8f9fa;
+}
+
+.vaccine-name {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.badge.required {
+    background: #e74c3c;
+    color: white;
+}
+
+.badge.recommended {
+    background: #11998e;
+    color: white;
+}
+
+.badge.routine {
+    background: #95a5a6;
+    color: white;
+}
+
+.vaccine-description {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.info-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.info-box h3 {
+    color: #856404;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+}
+
+.info-box ul {
+    margin-left: 20px;
+    color: #856404;
+    line-height: 1.8;
+}
+
+.alert-box {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.alert-box strong {
+    color: #155724;
+}
+
+.alert-box p {
+    color: #155724;
+    line-height: 1.6;
+}
+
+.no-selection {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.no-selection svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.footer {
+    background: #f8f9fa;
+    padding: 25px 30px;
+    text-align: center;
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.8;
+}
+
+.footer a {
+    color: #11998e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    .content {
+        padding: 25px 20px;
+    }
+
+    .vaccine-grid {
+        grid-template-columns: 1fr;
+    }
+}
